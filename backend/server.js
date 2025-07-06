@@ -23,7 +23,7 @@ db.connect((err) => {
 });
 
 // RUTA DE REGISTRO
-app.post('/api/register', (req, res) => {
+app.post('/api/register', (req, res) => { 
   const { username, email, password } = req.body;
   db.query(
     'INSERT INTO users (email, password) VALUES (?, ?)',
